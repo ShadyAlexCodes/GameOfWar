@@ -26,8 +26,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        generateArray(playerOneCards, 3, 1, 12);
-        generateArray(playerTwoCards, 3, 1, 12);
+        generateArray(playerOneCards, 5, 1, 12);
+        generateArray(playerTwoCards, 5, 1, 12);
 
         tvComputerCard = findViewById(R.id.txtComputerCard);
         tvPlayerCard = findViewById(R.id.txtPlayerCard);
@@ -80,6 +80,7 @@ public class MainActivity extends AppCompatActivity {
             System.out.println("PLAYER ONE WON");
         } else if (playerOneCards.size() < playerTwoCards.size()){
             button.setEnabled(false);
+
             tvValue.setTextColor(Color.GREEN);
             tvValue.setText("THE COMPUTER WON");
             System.out.println("PLAYER TWO WON");
